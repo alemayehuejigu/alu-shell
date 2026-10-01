@@ -2,16 +2,18 @@
 # 10-fizzbuzz
 for i in {1..100}; do
   if [ $((i % 15)) -eq 0 ]; then
-    printf "FizzBuzz"
+    out="FizzBuzz"
   elif [ $((i % 3)) -eq 0 ]; then
-    printf "Fizz"
+    out="Fizz"
   elif [ $((i % 5)) -eq 0 ]; then
-    printf "Buzz"
+    out="Buzz"
   else
-    printf "%s" "$i"
+    out="$i"
   fi
+
   if [ "$i" -ne 100 ]; then
-    printf " "
+    echo -n "$out "
+  else
+    echo "$out"
   fi
 done
-echo
