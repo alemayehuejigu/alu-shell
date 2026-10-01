@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# 7-clock
+hour=0
+while [ "$hour" -le 12 ]; do
+  min=0
+  while [ "$min" -le 59 ]; do
+    if [ "$min" -eq 0 ]; then
+      echo "Hour: $hour"
+    else
+      echo "$min"
+    fi
+    min=$((min + 1))
+  done
+  hour=$((hour + 1))
+done
